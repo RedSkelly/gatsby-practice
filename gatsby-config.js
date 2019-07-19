@@ -28,5 +28,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: `j9ugr3szekf1`,
+        accessToken: `GRHqqyOZ85YE3NpHS5tQ4DW5rFKNsAldj9w0qCIB8g0`,
+      },
+    },
   ],
 }
