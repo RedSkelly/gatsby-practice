@@ -1,3 +1,10 @@
+let activeENV =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+
+require('dotenv').config({
+  path: `.env.${activeENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Practice',
@@ -31,8 +38,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: `j9ugr3szekf1`,
-        accessToken: `GRHqqyOZ85YE3NpHS5tQ4DW5rFKNsAldj9w0qCIB8g0`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
