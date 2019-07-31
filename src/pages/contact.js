@@ -19,8 +19,8 @@ const ContactPage = () => {
           {' '}
           @shaun37k
         </a>{' '}
-        on Twitter! Don't have a Twitter? No biggie! Reach out to me{' '}
-        <a href="mailto: shaun37k@gmail.com">here</a>!
+        on Twitter! Don't have a Twitter? No biggie!
+        <br /> Shoot me an email <a href="mailto: shaun37k@gmail.com">here</a>!
       </p>
     </Layout>
   )

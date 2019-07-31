@@ -11,6 +11,7 @@ const AboutPage = () => {
       <Head title="About" />
       <h1 className={aboutStyles.title}>About Me</h1>
       <p>A WILD SKELLY APPEARED</p>
+      <p>* ... to be worked on. *</p>
       <p>
         <Link className={aboutStyles.link} to="/contact">
           Want to work with me? Reach out.
