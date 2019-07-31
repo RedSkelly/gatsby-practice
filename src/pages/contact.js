@@ -2,19 +2,25 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
+import contactStyles from './contact.module.scss'
 
 const ContactPage = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <h1>Contact</h1>
+      <h1 className={contactStyles.title}>Contact</h1>
       <p>
         The best way to reach me is via{' '}
-        <a href="https://twitter.com/@shaun37k" target="_blank">
+        <a
+          className={contactStyles.link}
+          href="https://twitter.com/@shaun37k"
+          target="_blank"
+        >
           {' '}
           @shaun37k
         </a>{' '}
-        on Twitter!
+        on Twitter! Don't have a Twitter? No biggie! Reach out to me{' '}
+        <a href="mailto: shaun37k@gmail.com">here</a>!
       </p>
     </Layout>
   )
