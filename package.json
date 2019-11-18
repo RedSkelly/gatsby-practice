@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "env-cmd -f .env gatsby develop",
+    "network": "gatsby develop -H 0.0.0.0",
     "fix:code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
     "fix:styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
     "start": "npm run develop",
