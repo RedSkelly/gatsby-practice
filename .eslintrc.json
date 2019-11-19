@@ -88,7 +88,9 @@
     "object-curly-newline": 0,
     "semi-style": 0,
     "semi": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0
   },
   "globals": {
     "fetch": false,

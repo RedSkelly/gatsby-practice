@@ -15,11 +15,12 @@ const ContactPage = () => {
           className={contactStyles.link}
           href="https://twitter.com/@shaun37k"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {' '}
           @shaun37k
         </a>{' '}
-        on Twitter! Don't have a Twitter? No biggie!
+        on Twitter! Don`&apos`t have a Twitter? No biggie!
         <br /> Shoot me an email <a href="mailto: shaun37k@gmail.com">here</a>!
       </p>
     </Layout>
