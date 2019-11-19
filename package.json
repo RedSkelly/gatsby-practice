@@ -60,7 +60,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm check-eslint-config && npm check-code"
+      "pre-push": "npm run check-eslint-config && npm run check-code"
     }
   },
   "lint-staged": {
