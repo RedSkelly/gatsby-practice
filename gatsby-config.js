@@ -1,14 +1,13 @@
-let activeENV =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+const activeENV = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
 
 require('dotenv').config({
-  path: `.env.${activeENV}`,
+  path: `.env.${activeENV}`
 })
 
 module.exports = {
   siteMetadata: {
     title: 'Shaun Kelly',
-    author: 'Shaun Kelly',
+    author: 'Shaun Kelly'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -21,16 +20,16 @@ module.exports = {
         stages: ['develop'],
         options: {
           emitWarning: true,
-          failOnError: false,
-        },
-      },
+          failOnError: false
+        }
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/`,
-      },
+        path: `${__dirname}/src/`
+      }
     },
     'gatsby-plugin-sharp',
     {
@@ -42,18 +41,18 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
-      },
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-  ],
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    }
+  ]
 }
