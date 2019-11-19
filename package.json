@@ -3,6 +3,7 @@
   "private": true,
   "description": "Shaun's personal site",
   "version": "0.1.0",
+  "author": "Shaun Kelly <shaun37k@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -10,6 +11,8 @@
     "network": "gatsby develop -H 0.0.0.0",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
+    "check-eslint-config": "eslint --print-config 'src/**/*.{js,jsx}' | eslint-config-prettier-check",
+    "check-code": "eslint src",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests!\""
@@ -43,6 +46,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "gatsby-plugin-eslint": "^2.0.5",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
     "postcss-scss": "^2.0.0",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
@@ -51,6 +56,22 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-prettier": "^1.1.1",
     "stylelint-scss": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm check-eslint-config && npm check-code"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run --silent fix:code",
+      "git add"
+    ],
+    "src/**/*.{css,scss}": [
+      "npm run --silent fix:styles",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
