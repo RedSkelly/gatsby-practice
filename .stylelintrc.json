@@ -18,6 +18,7 @@
       }
     ],
     "block-no-empty": null,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "no-empty-source": null
   }
 }
