@@ -30,7 +30,7 @@ const IndexPage = () => {
         domain, replace some links with buttons, dark/light mode button, new color palette, etc.
       </p>
       <p>
-        Need a developer?{' '}
+        Need a developer?{` `}
         <Link className={indexStyles.link} to="/contact">
           Contact me.
         </Link>
